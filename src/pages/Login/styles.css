@@ -1,0 +1,81 @@
+.login-container {
+   width: 100vw;
+   height: 100vh;
+   background: url('../../assets/Simbolo.png') no-repeat;
+   background-position: left;
+   background-color: var(--blue);
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+}
+
+.form-login {
+   margin-right: 200px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: flex-start;
+   width: 420px;
+   height: 422px;
+}
+
+.form-content h2 {
+   font-weight: 600;
+   font-size: 2.5rem;
+   color: var(--white);
+   margin-bottom: 24px;
+}
+
+.github-login {
+   display: flex;
+   align-items: center;
+   margin-bottom: 40px;
+}
+
+.github-login p {
+   font-weight: 500;
+   font-size: 1rem;
+   color: var(--text-highlight);
+   margin-left: 24px;
+}
+
+.input-block {
+   display: flex;
+   align-items: center;
+   margin-bottom: 20px;
+}
+
+.input-block input {
+   color: var(--text-highlight);
+   background-color: var(--blue-dark);
+   border: 0;
+   padding: 23px 13px 23px 30px;
+   border-top-left-radius: 5px;
+   border-bottom-left-radius: 5px;
+   outline: 0;
+}
+
+.input-block button {
+   background-color: var(--blue-dark);
+   width: 65px;
+   height: 66px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border: 0;
+   border-top-right-radius: 5px;
+   border-bottom-right-radius: 5px;
+   outline: 0;
+   transition: background-color 0.6s ease;
+   cursor: pointer;
+}
+
+.input-block button.green {
+   background-color: var(--green);
+   border: 0;
+}
+
+.form-content span {
+   color: var(--text-highlight);
+   margin-left: 5px;
+}     

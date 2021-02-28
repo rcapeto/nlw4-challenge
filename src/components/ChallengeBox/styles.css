@@ -1,0 +1,130 @@
+.challenge-box {
+   background-color: var(--white);
+   padding-top: 25px;
+   border-radius: 30px;
+   height: 100%;
+   box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
+}
+
+.challenge-box-uncompleted {
+   display: flex;
+   flex-direction: column;
+   text-align: center;   
+   align-items: center;
+   justify-content: center;
+   height: 100%;
+   padding: 1.5rem 2rem;
+}
+
+.challenge-box h3 {
+   font-weight: 500;
+   font-size: 1.5rem;
+   color: var(--text);
+}
+
+.challenge-box-flex {
+   display: flex;
+   align-items: center;
+   text-align: left;
+   justify-content: center;
+   margin-top: 40px;
+}
+
+.challenge-box-flex img {
+   margin-right: 24px;
+}
+
+.challenge-box-flex p {
+   max-width: 223px;
+   font-weight: 400;
+   font-size: 1rem;
+   color: var(--text);
+}
+
+.challenge-box-completed-challenge {
+   flex: 1;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.challenge-box-content {
+   padding: 0 2rem 1.5rem 2rem;
+}
+
+.challenge-box-content h2 {
+   color: var(--blue);
+   font-weight: 600;
+   font-size: 1.5rem;
+   text-align: center;
+   border-bottom: 1px solid #DCDDE0;
+   padding-bottom: 25px;
+}
+
+.challenge-description {
+   padding-top: 38px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+}
+
+.challenge-description img {
+   height: 112px;
+   width: 140px;
+   margin-bottom: 24px;
+}
+
+.challenge-description h3 {
+   color: var(--title);
+   font-weight: 600;
+   font-size: 1.8rem;
+   margin-bottom: 8px;
+}
+
+.challenge-description p {
+   color: var(--text);
+   font-weight: 400;
+   font-size: 1rem;
+   line-height: 26px;
+}
+
+.challenge-buttons {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.challenge-buttons .button {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 50%;
+   height: 80px;
+   background-color: #F7FFF5;
+   border: 1px solid #DCDDE0;
+   font-weight: 500;
+   font-size: 1.5rem;
+   transition: all ease 0.3s;
+}
+
+.challenge-buttons .button.fail {
+   color: var(--red);
+}  
+
+.challenge-buttons .button.success {
+   color: var(--green);
+}
+
+.challenge-buttons .button:hover {
+   color: var(--white);
+}
+
+.challenge-buttons .button.fail:hover {
+   background-color: var(--red);
+}
+
+.challenge-buttons .button.success:hover {
+   background-color: var(--green);
+}

@@ -1,0 +1,21 @@
+.dashboard {
+   display: flex;
+}
+
+.dashboard-content {
+   height: 100vh;
+   max-width: 992px;
+   margin: 0 auto;
+   padding: 2.5rem 2rem;
+   display: flex;
+   flex-direction: column;
+   flex: 1;
+}
+
+.dashboard-content section {
+   padding: 110px 0;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-gap: 6.5rem;
+   align-content: center;
+}

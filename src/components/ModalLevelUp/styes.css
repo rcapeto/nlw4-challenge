@@ -1,0 +1,90 @@
+.overlay {
+   position: fixed;
+   background-color: red;
+   top: 0;
+   right: 0;
+   left: 0;
+   bottom: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: rgba(242, 243, 245, 0.8);
+}
+
+.modal {
+   background-color: var(--white);
+   max-width: 400px;
+   width: 100%;
+   position: relative;
+}
+
+.modal-content {
+   padding: 40px 60px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+}
+
+.modal-content header {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-size: 75%;
+   margin-bottom: 24px;
+   position: relative;
+}
+
+.modal-content header img {
+   position: absolute;
+   width: 200px;
+}
+
+.modal-content header span {
+   color: var(--blue);
+   font-weight: 600;
+   font-size: 6rem;
+   z-index: 100;
+}
+
+.modal-content strong {
+   color: var(--title);
+   font-weight: 600;
+   font-size: 2rem;
+}
+
+.modal-content p {
+   color: var(--text);
+   font-size: 1.2rem;
+   font-weight: 400;
+}
+
+.share-twitter {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 28px 64px;
+   border-top: 1px solid #DCDDE0;
+   cursor: pointer;
+   transition: all ease 0.3s;
+}
+
+.share-twitter:hover {
+   filter: brightness(0.7);
+}
+
+.share-twitter p {
+   color: var(--blue-twitter);
+   font-size: 1rem;
+   font-weight: 600;
+   margin-right: 16px;
+}
+
+.modal .close-button {
+   border: 0;
+   background: transparent;
+   position: absolute;
+   top: 20px;
+   right: 20px;
+   font-size: 0;
+}

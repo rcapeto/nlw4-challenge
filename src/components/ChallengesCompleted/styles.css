@@ -1,0 +1,22 @@
+.challenges {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-top: 56px;
+   border-bottom: 0.1px solid #D7D8DA;
+   padding-bottom: 18px;
+}
+
+.challenges p {
+   font-weight: 500;
+   font-size: 1.2rem;
+   line-height: 24px;
+   color: var(--text);
+}
+
+.challenges span {
+   font-weight: 500;
+   font-size: 1.7rem;
+   line-height: 30px;
+   color: var(--text);
+}
