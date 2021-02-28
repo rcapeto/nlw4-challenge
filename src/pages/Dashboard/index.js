@@ -2,7 +2,6 @@ import { useEffect, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 
 import { LoginContext } from '../../context/LoginContext';
-
 import Sidebar from '../../components/Sidebar';
 import ExperienceBar from '../../components/ExperienceBar';
 import Profile from '../../components/Profile';

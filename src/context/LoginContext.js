@@ -10,9 +10,7 @@ export default function LoginContextProvider({ children }) {
    useEffect(() => {
       const user = getUser();
 
-      if(user) {
-         setCurrentUser(user);
-      }
+      if(user) setCurrentUser(user);
    }, []);
 
    async function getUserInfo(username) {

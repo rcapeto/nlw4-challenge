@@ -1,12 +1,14 @@
-import './styes.css';
-import { ChallengeContext } from '../../context/ChallengeContext';
 import { useContext } from 'react';
+
+import { ChallengeContext } from '../../context/ChallengeContext';
 import closeImg from '../../assets/close.png';
 import twitterImg from '../../assets/twitter.png';
 import numberBg from '../../assets/bg-number.png';
 
+import './styes.css';
+
 export default function ModalLevelUp() {
-   const { level, closeModal } = useContext(ChallengeContext);
+   const { level, closeModal, shareOnTwitter } = useContext(ChallengeContext);
 
    return(
       <div className="overlay">
@@ -20,7 +22,7 @@ export default function ModalLevelUp() {
                <p>Você alcançou um novo level.</p>
             </div>
 
-            <div className="share-twitter">
+            <div className="share-twitter" onClick={shareOnTwitter}>
                <p>Compartilhar no Twitter</p>
                <img src={twitterImg} alt="Twitter Logo"/>
             </div>

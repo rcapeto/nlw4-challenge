@@ -7,6 +7,7 @@
    display: flex;
    justify-content: flex-end;
    align-items: center;
+   overflow: hidden;
 }
 
 .form-login {
@@ -15,8 +16,10 @@
    flex-direction: column;
    justify-content: space-around;
    align-items: flex-start;
-   width: 420px;
-   height: 422px;
+}
+
+.form-login img.logo {
+   margin-bottom: 100px;
 }
 
 .form-content h2 {
@@ -37,6 +40,7 @@
    font-size: 1rem;
    color: var(--text-highlight);
    margin-left: 24px;
+   max-width: 300px;
 }
 
 .input-block {
@@ -79,3 +83,94 @@
    color: var(--text-highlight);
    margin-left: 5px;
 }     
+
+@media(max-width: 922px) {
+   .login-container {
+      justify-content: center;
+      background-position: center;
+      align-items: center;
+   }
+
+   .form-login {
+      margin-right: 0px;
+      justify-content: space-around;
+      align-items: center;
+   }
+}
+
+@media(max-width: 768px) {
+   .form-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .github-login p {
+      max-width: initial;
+   }
+   
+   .form-login img.logo {
+      margin-bottom: 70px;
+   }
+
+   .input-block {
+      padding-left: 30px;
+   }
+
+   .input-block button {
+      background-color: transparent;
+   }
+
+   .input-block input {
+      border-radius: 5px;
+   }
+   
+   .form-login img {
+      transform: scale(0.7);
+   }
+
+   .github-login {
+      flex-direction: column;
+   }
+
+   .form-content h2 {
+      text-align: center;
+   }
+}
+
+@media(max-width: 320px) {
+   .form-login img {
+      transform: scale(0.5);
+   }
+
+   .input-block input {
+      padding: 13px 3px 13px 15px;
+   }
+   
+   .input-block button {
+      width: 33px;
+      height: 33px;
+   }
+
+   .input-block button.green {
+      background-color: transparent;
+      border: 0;
+   }
+
+   .github-login {
+      margin-bottom: 20px;
+   }
+   
+   .github-login img {
+      width: 70px;
+      height: 70px;
+   }
+
+   .github-login p {
+     display: none;
+   }
+
+   .form-content span {
+      font-size: 1rem;
+   }    
+}

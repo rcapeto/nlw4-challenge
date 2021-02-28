@@ -1,11 +1,11 @@
+import { BsGearFill } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
+
 import logoImg from '../../assets/logo-menu.png';
 import homeImg from '../../assets/home.png';
 import homeActiveImg from '../../assets/home-active.png';
 import awardImg from '../../assets/award.png';
 import awardActiveImg from '../../assets/award-active.png';
-
-import { BsGearFill } from 'react-icons/bs';
-import { Link } from 'react-router-dom';
 
 import './styles.css';
 
@@ -32,7 +32,10 @@ export default function Sidebar({ currentPage }) {
             </Link>
 
             <Link to="/config" className={currentPage === 'config' ? 'active' : ''}>
-               <BsGearFill size={25} color="#6766"/>
+               <BsGearFill 
+                  size={25} 
+                  color={currentPage === 'config' ?  '#5965e0' : '#6766'}
+               />
             </Link>
          </div>
 

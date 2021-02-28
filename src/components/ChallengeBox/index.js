@@ -1,10 +1,12 @@
 import { useContext } from 'react';
+
 import { ChallengeContext } from '../../context/ChallengeContext';
 import { CountDownContext } from '../../context/CountDownContext';
-import './styles.css';
 import plusImg from '../../assets/plus.png';
 import bodyImage from '../../assets/peso.png';
 import eyeImage from '../../assets/eye.svg';
+
+import './styles.css';
 
 export default function ChallengeBox() {
    const { activeChallange, completeChallenge, resetChallenge } = useContext(ChallengeContext);

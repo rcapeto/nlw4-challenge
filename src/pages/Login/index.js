@@ -2,11 +2,11 @@ import { AiOutlineArrowRight } from 'react-icons/ai';
 import { useContext, useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 
-import './styles.css';
-
 import logoImg from '../../assets/Logo.png';
 import githubLogin from '../../assets/Github.png';
 import { LoginContext } from '../../context/LoginContext';
+
+import './styles.css';
 
 export default function Login() {
    const [github_username, setGithubUsername] = useState('');
@@ -35,14 +35,14 @@ export default function Login() {
    return(
       <div className="login-container">
          <form className="form-login" onSubmit={handleSubmit}>
-            <img src={logoImg} alt="Logo"/>
+            <img src={logoImg} alt="Logo" className="logo"/>
 
             <div className="form-content">
                <h2>Bem-vindo</h2>
 
                <div className="github-login">
                   <img src={githubLogin} alt="Github Logo"/>
-                  <p>Digite o seu usuário para logar</p>
+                  <p>Faça o seu login com GitHub para começar</p>
                </div>
 
                <div className="input-block">

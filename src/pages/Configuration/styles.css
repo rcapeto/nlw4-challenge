@@ -1,0 +1,88 @@
+.configuration {
+   display: flex;
+}
+
+.config-content {
+   width: 960px;
+   margin: 0 auto;
+   padding-top: 40px;
+}
+
+.config-content h2 {
+   font-weight: 600;
+   font-size: 2rem;
+   line-height: 46px;
+   color: var(--title);
+   margin-bottom: 40px;
+}
+
+.config-items {
+   background-color: var(--white);
+   padding: 2rem 3rem;
+   border-radius: 10px;
+   height: 80%;
+   display: flex;
+   flex-direction: column;
+}
+
+.config-items .block {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   flex: 1;
+}
+
+.config-items .block label {
+   font-weight: 500;
+   font-size: 1.3rem;
+   color: var(--text);
+   margin-bottom: 5px;
+}
+
+.config-items .block input {
+   border: 0;
+   border-bottom: 2px solid var(--text);
+   outline-style: none;
+   padding: 5px 10px;
+   color: var(--blue);
+   transition: all ease .3s;
+}
+
+.config-items .block .config-input {
+   display: flex;
+   align-items: center;
+}
+
+.config-items .block .config-input p {
+   margin-left: 3px;
+}
+
+.config-items .block input:focus {
+   border-color: var(--blue);
+}
+
+.button-container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top: 40px;
+}
+
+.button-container button {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 30%;
+   height: 50px;
+   border: 1px solid #DCDDE0;
+   font-weight: 500;
+   color: var(--white);
+   background-color: var(--blue);
+   font-size: 1.2rem;
+   transition: all ease 1s;
+   color: var(--white);
+}
+
+.button-container button:hover {
+   filter: brightness(0.7);
+}

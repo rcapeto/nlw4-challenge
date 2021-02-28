@@ -1,5 +1,7 @@
 import { useContext } from 'react';
+
 import { CountDownContext } from '../../context/CountDownContext';
+
 import './styles.css';
 
 export default function CountDown() {

@@ -2,6 +2,7 @@ import './styles.css';
 import { useContext } from 'react';
 import { LoginContext } from '../../context/LoginContext';
 import { ChallengeContext } from '../../context/ChallengeContext';
+
 import levelImg from '../../assets/Up.svg';
 
 export default function Profile() {

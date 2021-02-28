@@ -1,5 +1,7 @@
 import { createContext, useState, useEffect, useContext, useCallback } from 'react';
+
 import ModalLevelUp from '../components/ModalLevelUp';
+import ModalTwitter from '../components/ModalTwitter';
 import challenges from '../challenges.json';
 import iconImg from '../assets/favicon.png';
 import { LoginContext } from './LoginContext';
@@ -10,6 +12,7 @@ export default function ChallengeContextProvider({ children }) {
    const [level, setLevel] = useState(1);
    const [completedChallenges, setCompletedChallenges] = useState(0);
    const [showModal, setShowModal] = useState(false);
+   const [showModalTwitter, setShowModalTwitter] = useState(false);
    const [activeChallange, setActiveChallenge] = useState(null);
    const [currentExperience, setCurrentExperience] = useState(0); 
 
@@ -54,10 +57,12 @@ export default function ChallengeContextProvider({ children }) {
       const challenge = challenges[randomNumber];
 
       if(Notification.permission === 'granted') {
-         new Notification('Novo Desafio!', {
+         const notification = new Notification('Novo Desafio!', {
             icon: iconImg,
-            body: `Valendo: ${challenge.amount}xp!`
+            body: `Valendo: ${challenge.amount}xp!`         
          });
+
+         setTimeout(() => notification.close(), 2000);
       }
 
       setActiveChallenge(challenge);
@@ -65,6 +70,14 @@ export default function ChallengeContextProvider({ children }) {
 
    function closeModal() {
       setShowModal(false);
+   }
+
+   function shareOnTwitter() {
+      setShowModalTwitter(true);
+   }
+
+   function closeModalTwitter() {
+      setShowModalTwitter(false);
    }
 
    function completeChallenge() {
@@ -98,10 +111,13 @@ export default function ChallengeContextProvider({ children }) {
          currentExperience,
          completeChallenge,
          resetChallenge,
-         experienceToNextLevel
+         experienceToNextLevel,
+         shareOnTwitter,
+         closeModalTwitter
       }}>
          { children }
          { showModal && <ModalLevelUp /> }
+         { showModalTwitter && <ModalTwitter /> }
       </ChallengeContext.Provider>
    );
 }
