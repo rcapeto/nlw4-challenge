@@ -1,0 +1,72 @@
+.leaderboard-content table tbody tr td {
+   background-color: var(--white);
+}
+
+.leaderboard-content table tbody tr td.position {
+   font-weight: 500;
+   font-size: 1.3rem;
+   color: var(--text);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-right: 4px;
+   height: 80px;
+   border-top-left-radius: 5px;
+   border-bottom-left-radius: 5px;
+}
+
+.leaderboard-content table tbody tr td:last-child {
+   border-top-right-radius: 5px;
+   border-bottom-right-radius: 5px;
+}
+
+.leaderboard-content table tbody tr td .profile {
+   padding-left: 10px;
+}
+
+.leaderboard-content table tbody tr td .profile img {
+   width: 64px;
+   height: 64px;
+}
+
+.leaderboard-content table tbody tr td .profile .profile-info {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+}
+
+.leaderboard-content table tbody tr td .profile .profile-info p {
+   font-weight: 600;
+   color: var(--title);
+   font-size: 1.4rem;
+}
+
+.leaderboard-content table tbody tr td .profile .profile-info .level {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   margin: 0;
+   margin-top: 7px;
+}
+
+.leaderboard-content table tbody tr td .profile .profile-info .level img {
+   width: 15px;
+   height: 15px;
+   margin-right: 9px;
+} 
+
+.leaderboard-content table tbody tr td .profile .profile-info .level h6 {
+   font-weight: 400;
+   color: var(--text);
+   font-size: 1rem;
+} 
+
+.leaderboard-content table tbody tr td p {
+   font-weight: 500;
+   color: var(--text);
+   font-size: 1rem;
+}
+
+.leaderboard-content table tbody tr td span {
+   color: var(--blue);
+}

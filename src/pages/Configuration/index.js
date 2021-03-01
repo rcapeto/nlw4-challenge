@@ -12,7 +12,7 @@ export default function Configuration() {
    const [inputTime, setInputTime] = useState('');
    const [showModal, setShowModal] = useState(false);
    const { changeTime, getMainTime } = useContext(CountDownContext);
-   const { currentUser } = useContext(LoginContext);
+   const { currentUser, deleteAccount } = useContext(LoginContext);
 
    const history = useHistory();
 
@@ -34,6 +34,12 @@ export default function Configuration() {
    function handleCloseModal() {
       setShowModal(false);
       history.push('/dashboard');
+   }
+
+   function handleDeleteAccount() {
+      if(!window.confirm(`Você deseja deletar a conta: ${currentUser.username}?`)) return;
+      deleteAccount();
+      history.push('/');
    }
 
    return(
@@ -64,6 +70,7 @@ export default function Configuration() {
 
               <div className="button-container">
                  <button onClick={handleSaveConfig}>Salvar</button>
+                 <button className="delete-button" onClick={handleDeleteAccount}>Deletar Conta</button>
               </div>
             </div>
          </div>

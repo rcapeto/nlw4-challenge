@@ -21,8 +21,12 @@ export default function ChallengeContextProvider({ children }) {
    const { currentUser } = useContext(LoginContext);
    
    const getChallengeInfo = useCallback(() => {
+
       if(currentUser) {
          const data = JSON.parse(localStorage.getItem(`:move.it:${currentUser.username}`));
+
+         if(!data) return;
+
          setLevel(data.level);
          setCurrentExperience(data.currentExperience);
          setCompletedChallenges(data.completedChallenges);

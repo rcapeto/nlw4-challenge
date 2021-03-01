@@ -8,15 +8,15 @@ import './styles.css';
 
 export default function Home() {
    const history = useHistory();
-   const { getUser } = useContext(LoginContext);
+   const { currentUser } = useContext(LoginContext);
 
    useEffect(() => {
-      if(getUser()) {
+      if(currentUser) {
          history.push('/dashboard');
       } else {
          history.push('/login');
       }
-   }, [getUser, history]);
+   }, [currentUser, history]);
 
    return(
       <div className="home-container">

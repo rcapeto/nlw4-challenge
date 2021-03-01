@@ -40,8 +40,12 @@ export default function LoginContextProvider({ children }) {
       return JSON.parse(localStorage.getItem(':move.it:user'));
    }
 
+   function deleteAccount() {
+      localStorage.clear();
+   }
+
    return(
-      <LoginContext.Provider value={{ currentUser, getUserInfo, getUser, errorLogin, loading }}>
+      <LoginContext.Provider value={{ currentUser, getUserInfo, errorLogin, loading, deleteAccount }}>
          { children }
       </LoginContext.Provider>
    );

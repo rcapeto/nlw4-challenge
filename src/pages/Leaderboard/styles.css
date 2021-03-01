@@ -1,0 +1,38 @@
+.leaderboard {
+   display: flex;
+}
+
+.leaderboard-content {
+   width: 960px;
+   margin: 0 auto;
+   padding-top: 40px;
+}
+
+.leaderboard-content h2 {
+   font-weight: 600;
+   font-size: 2rem;
+   line-height: 46px;
+   color: var(--title);
+   margin-bottom: 40px;
+}
+
+.leaderboard-content table {
+   width: 100%;
+   border-spacing: 0 8px;
+}
+
+.leaderboard-content table thead tr th {
+   color: #ffff;
+   text-align: left;
+   text-transform: uppercase;
+   font-weight: 700;
+   font-size: 0.8rem;
+   background: none;
+   color: var(--text);
+   padding-bottom: 24px;
+}
+
+.leaderboard-content table tbody tr {
+   height: 100%;  
+   margin-bottom: 8px;
+}

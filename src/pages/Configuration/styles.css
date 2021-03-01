@@ -64,7 +64,7 @@
 .button-container {
    display: flex;
    align-items: center;
-   justify-content: center;
+   justify-content: space-evenly;
    margin-top: 40px;
 }
 
@@ -85,4 +85,8 @@
 
 .button-container button:hover {
    filter: brightness(0.7);
+}
+
+.button-container .delete-button {
+   background-color: var(--red);
 }

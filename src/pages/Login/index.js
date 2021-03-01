@@ -10,13 +10,13 @@ import './styles.css';
 
 export default function Login() {
    const [github_username, setGithubUsername] = useState('');
-   const { getUserInfo, getUser, errorLogin, loading } = useContext(LoginContext);
+   const { getUserInfo, currentUser, errorLogin, loading } = useContext(LoginContext);
    const history = useHistory();
 
    useEffect(() => {
       if(loading) return;
-      if(getUser()) history.push('/dashboard');
-   }, [getUser, history, loading]);
+      if(currentUser) history.push('/dashboard');
+   }, [currentUser, history, loading]);
 
    async function handleSubmit(e) {
       e.preventDefault();
